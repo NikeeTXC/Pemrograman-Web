@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Streaming Musik</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#library">Koleksi</a></li>
+                    <li><a href="#artists">Artis</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>Stream Musik</h2>
+                <p>Dengarkan lagu-lagu populer dari artis Indonesia</p>
+            </div>
+        </section>
+
+        <section class="player-section">
+            <div class="container">
+                <div class="player-container">
+                    <div class="album-art">
+                        <img src="images/akad.jpg" alt="Album Cover" id="albumCover">
+                    </div>
+                    
+                    <div class="song-info">
+                        <h3 id="songTitle">Akad</h3>
+                        <p id="artistName">Payung Teduh</p>
+                        
+                        <div class="progress-container">
+                            <span id="currentTime">0:00</span>
+                            <input type="range" id="progressBar" value="0" min="0" max="100">
+                            <span id="totalTime">0:00</span>
+                        </div>
+                        
+                        <div class="controls">
+                            <button id="prevBtn" class="control-btn"><i class="fas fa-step-backward"></i></button>
+                            <button id="playBtn" class="control-btn play-btn"><i class="fas fa-play"></i></button>
+                            <button id="nextBtn" class="control-btn"><i class="fas fa-step-forward"></i></button>
+                            <button id="muteBtn" class="control-btn"><i class="fas fa-volume-up"></i></button>
+                        </div>
+                        
+                        <div class="volume-control">
+                            <i class="fas fa-volume-down"></i>
+                            <input type="range" id="volumeSlider" min="0" max="100" value="50">
+                            <i class="fas fa-volume-up"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lyrics-container">
+                    <h3>Lirik Lagu</h3>
+                    <div class="lyrics-content" id="lyricsContent"> </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="library" class="library">
+            <div class="container">
+                <h2>Koleksi Lagu</h2>
+                <div class="song-list">
+                    <div class="song-card" data-song="1">
+                        <img src="images/akad.jpg" alt="Album Cover">
+                        <div class="song-details">
+                            <h4>Akad</h4>
+                            <p>Payung Teduh</p>
+                        </div>
+                        <div class="song-duration">4:18</div>
+                    </div>
+                    
+                    <div class="song-card" data-song="2">
+                        <img src="images/tulus.jpg" alt="Album Cover">
+                        <div class="song-details">
+                            <h4>Monokrom</h4>
+                            <p>Tulus</p>
+                        </div>
+                        <div class="song-duration">3:34</div>
+                    </div>
+                    
+                    <div class="song-card" data-song="3">
+                        <img src="images/terbuangdalamwaktu.jpg" alt="Album Cover">
+                        <div class="song-details">
+                            <h4>Terbuang Dalam Waktu</h4>
+                            <p>Barasuara</p>
+                        </div>
+                        <div class="song-duration">4:39</div>
+                    </div>
+                    
+                    <div class="song-card" data-song="4">
+                        <img src="images/zonanyaman.jpg" alt="Album Cover">
+                        <div class="song-details">
+                            <h4>Zona Nyaman</h4>
+                            <p>Fourtwnty</p>
+                        </div>
+                        <div class="song-duration">4:19</div>
+                    </div>
+                    
+                    <div class="song-card" data-song="5">
+                        <img src="images/suratcintauntukstarla.jpg" alt="Album Cover">
+                        <div class="song-details">
+                            <h4>Surat Cinta Untuk Starla</h4>
+                            <p>Virgoun</p>
+                        </div>
+                        <div class="song-duration">5:08</div>
+                    </div>
+
+                    <div class="song-card" data-song="6">
+                        <img src="images/hidupharusterusberjalan.jpg" alt="Album Cover">
+                        <div class="song-details">
+                            <h4>Hidup Harus Terus Berjalan</h4>
+                            <p>Bernadya</p>
+                        </div>
+                        <div class="song-duration">3:02</div>
+                    </div>
+
+                    <div class="song-card" data-song="7">
+                        <img src="images/everythinguare.jpg" alt="Album Cover">
+                        <div class="song-details">
+                            <h4>Everything U Are</h4>
+                            <p>Hindia</p>
+                        </div>
+                        <div class="song-duration">3:56</div>
+                    </div>
+
+                    <div class="song-card" data-song="8">
+                        <img src="images/tanparasabersalah.jpg" alt="Album Cover">
+                        <div class="song-details">
+                            <h4>Tanpa Rasa Bersalah</h4>
+                            <p>Fabio Asher</p>
+                        </div>
+                        <div class="song-duration">4:38</div>
+                    </div>
+
+                    <div class="song-card" data-song="9">
+                        <img src="images/terlalulama.jpg" alt="Album Cover">
+                        <div class="song-details">
+                            <h4>Terlalu Lama</h4>
+                            <p>Viera</p>
+                        </div>
+                        <div class="song-duration">4:07</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="artists" class="artists">
+            <div class="container">
+                <h2>Artis Populer</h2>
+                <div class="artist-grid">
+                    <div class="artist-card">
+                        <img src="images/tulus.jpg" alt="Tulus">
+                        <div class="artist-info">
+                            <h3>Tulus</h3>
+                            <p>Vocalist</p>
+                        </div>
+                    </div>
+
+                    <div class="artist-card">
+                        <img src="images/terbuangdalamwaktu.jpg" alt="Barasuara">
+                        <div class="artist-info">
+                            <h3>Barasuara</h3>
+                            <p>Band</p>
+                        </div>
+                    </div>
+
+                    <div class="artist-card">
+                        <img src="images/zonanyaman.jpg" alt="Fourtwnty">
+                        <div class="artist-info">
+                            <h3>Fourtwnty</h3>
+                            <p>Band</p>
+                        </div>
+                    </div>
+
+                    <div class="artist-card">
+                        <img src="images/everythinguare.jpg" alt="Hindia">
+                        <div class="artist-info">
+                            <h3>Hindia</h3>
+                            <p>Band</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <audio id="audioPlayer" preload="metadata">
+    </audio>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; Bayu Aji Sasmita | Universitas Pamulang.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
